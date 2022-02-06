@@ -1,0 +1,27 @@
+#searchbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#searchbar ul li button {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer
+}
+ 
+.vis-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#flag {
+  max-width: 100%;
+}
