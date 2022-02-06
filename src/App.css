@@ -11,8 +11,13 @@ body {
   background-size: cover;
 }
 
+#searchbar {
+  padding: 1rem;
+}
+
 #displayWrapper {
-  background: inherit;
+  background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=0.800000011920929&auto=format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=');
+  padding: 1.5rem;
   width: 20rem;
   height: auto;
   position: absolute;
@@ -24,20 +29,35 @@ body {
 
 #displayWrapper:before{
   content: "";
-  width: 25rem;
+  width: 100%;
   height: auto;
   background: inherit; 
-  position: absolute;
-  left: -25px;  
+  position: fixed;
+  /* left: -50px;   */
   right: 0;
   top: -25px;   
   bottom: 0;
   box-shadow: inset 0 0 0 200px rgba(255,255,255,0.3);
-  filter: blur(10px);
+  filter: blur(5px);
  }
 
  #display {
    position: relative;
+ }
+
+ .space {
+   margin: 1em 0;
+ }
+
+ #conditions {
+   display: flex;
+   align-items: center;
+   margin: none;
+ }
+
+ ul {
+   padding-left: 1em;
+   margin: 10px 0;
  }
 
 #searchbar ul {
