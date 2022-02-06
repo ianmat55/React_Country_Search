@@ -27,20 +27,22 @@ function Display({ country, weather }) {
 	const display = country
 	if (country !== '' && country !== undefined) { // && != undefined fixes issue of deleting inputs and adding spaces, but theyre must be a better way
 		return (
-			<div>
-				<img id='flag' src={display.flags.svg} alt={display.name.common} />
-				<h1 id='country-name'> {display.name.common} </h1>
-				<h3 id='capital'> Capital: {display.capital} </h3>
-				<h3 id='population'> Population: {display.population} </h3>
-				<div id='languages'>
-					<h3> Languages: </h3>
-					<ul>
-						{Object.keys(display.languages).map(index => {
-							return <li key={index}> {display.languages[index]} </li>
-						})}
-					</ul>
+			<div id='displayWrapper'>
+				<div id='display'>
+					<img id='flag' src={display.flags.svg} alt={display.name.common} />
+					<h1 id='country-name'> {display.name.common} </h1>
+					<h3 id='capital'> Capital: {display.capital} </h3>
+					<h3 id='population'> Population: {display.population} </h3>
+					<div id='languages'>
+						<h3> Languages: </h3>
+						<ul>
+							{Object.keys(display.languages).map(index => {
+								return <li key={index}> {display.languages[index]} </li>
+							})}
+						</ul>
+					</div>
+					<Weather weather={weather} />
 				</div>
-				<Weather weather={weather} />
 			</div>
 		)
 	} else {
